@@ -6,7 +6,7 @@
 /*   By: akulaksi <akulaksi@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 14:11:06 by akulaksi          #+#    #+#             */
-/*   Updated: 2024/02/05 14:30:23 by akulaksi         ###   ########.fr       */
+/*   Updated: 2024/02/05 14:32:45 by akulaksi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char    *ft_strcapitalize(char *str)
     return (str);
 }
 
-int main (void)
+/*int main (void)
 {
     char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
     int i;
@@ -57,4 +57,4 @@ int main (void)
         i++;
     }
     return(0);
-}
+}*/
