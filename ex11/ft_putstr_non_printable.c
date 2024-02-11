@@ -6,7 +6,7 @@
 /*   By: akulaksi <akulaksi@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 10:13:26 by akulaksi          #+#    #+#             */
-/*   Updated: 2024/02/11 14:44:13 by akulaksi         ###   ########.fr       */
+/*   Updated: 2024/02/11 16:40:42 by akulaksi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,4 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(str[i]);
 		i++;
 	}
-}
-
-int main (void)
-{
-	ft_putstr_non_printable("Coucou\ntu vas bien");
-	ft_putchar('\n');
-	ft_putstr_non_printable("Coucou tu vas bie\t\v\0n");
-	ft_putchar('\n');
-	ft_putstr_non_printable("");
 }
