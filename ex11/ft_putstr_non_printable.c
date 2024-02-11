@@ -6,24 +6,41 @@
 /*   By: akulaksi <akulaksi@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 10:13:26 by akulaksi          #+#    #+#             */
-/*   Updated: 2024/02/10 14:36:37 by akulaksi         ###   ########.fr       */
+/*   Updated: 2024/02/11 14:44:13 by akulaksi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_putstr_non_printable(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str < 32 || *str >= 127)
+		if (!(str[i] >= 32 && str[i] <= 126))
 		{
-			write(1, "\\", 1);
-			write(1, "0123456789abcdef" + (*str >> 4), 1);
-			write(1, "0123456789abcdef" + (*str & 0xF), 1);
+			ft_putchar('\\');
+			ft_putchar("0123456789abcdef"[str[i] / 16]);
+			ft_putchar("0123456789abcdef"[str[i] % 16]);
 		}
 		else
-			write(1, str, 1);
-		str++;
+			ft_putchar(str[i]);
+		i++;
 	}
+}
+
+int main (void)
+{
+	ft_putstr_non_printable("Coucou\ntu vas bien");
+	ft_putchar('\n');
+	ft_putstr_non_printable("Coucou tu vas bie\t\v\0n");
+	ft_putchar('\n');
+	ft_putstr_non_printable("");
 }

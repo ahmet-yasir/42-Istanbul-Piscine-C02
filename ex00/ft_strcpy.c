@@ -6,7 +6,7 @@
 /*   By: akulaksi <akulaksi@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 12:34:56 by akulaksi          #+#    #+#             */
-/*   Updated: 2024/02/10 14:19:45 by akulaksi         ###   ########.fr       */
+/*   Updated: 2024/02/11 14:10:30 by akulaksi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
